@@ -28,41 +28,67 @@
           />
         </div>
 
-        <h1>Eduardo Decanini</h1>
-        <a href="https://www.instagram.com/edu_decanini/">
+        <h1 id="user_name">Eduardo Decanini</h1>
+        <a href="https://www.github.com/dec4nini/" target="_blank">
           <img src="images/github.svg" alt="" />
           @edu_decanini
         </a>
 
         <p>Um programador focado e apaixonado pelo que faz.</p>
 
-        <ul>
-          <li>
-            <a href="https://www.youtube.com/">
-              <img
-                src="images/youtube.svg"
-                alt="Botão do Youtube"
-                target="_blank"
-              />
+        <ul id="social_links">
+          <li class="youtube">
+            <a href="https://www.youtube.com/" target="_blank">
+              <img src="images/youtube.svg" alt="Botão do Youtube" />
             </a>
           </li>
-          <li>
-            <a href="https://twitter.com/edu_decanini" alt="Botão do Twitter">
+          <li class="twitter">
+            <a
+              href="https://twitter.com/edu_dedddddcanini"
+              alt="Botão do Twitter"
+              target="_blank"
+            >
               <img src="images/twitter.svg" alt="" />
             </a>
           </li>
-          <li>
-            <a href="https://www.facebook.com/eduardo.decanini">
+          <li class="facebook">
+            <a
+              href="https://www.facebook.com/edudddardo.decanini"
+              target="_blank"
+            >
               <img src="images/facebook.svg" alt="Botão do facebook" />
             </a>
           </li>
-          <li>
-            <a href="https://www.instagram.com/edu_decanini/">
+          <li class="instagram">
+            <a
+              href="https://www.instagram.com/edu_decanidddddni/"
+              target="_blank"
+            >
               <img src="images/instagram.svg" alt="Botão do instagram" />
             </a>
           </li>
         </ul>
       </div>
     </main>
+    <script>
+      const links_social_media = {
+        github: 'dec4nini',
+        youtube: 'channel/UCJJ8ySYLXJZ_wiYBHSaBdkQ',
+        facebook: 'eduardo.decanini',
+        instagram: 'edu_decanini',
+        twitter: 'edu_decanini'
+      }
+      function change_social_media_links() {
+        for (let li of social_links.children) {
+          const social = li.getAttribute('class')
+
+          li.children[0].href = `https://${social}.com/${links_social_media[social]}`
+
+          alert(li.children[0].href)
+        }
+      }
+
+      change_social_media_links()
+    </script>
   </body>
 </html>
